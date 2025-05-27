@@ -1,0 +1,334 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Corpo com fundo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cfd5e2;
+    color: #1b1f28;
+}
+  
+/* Conteúdo centralizado */
+.conteudo {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    min-height: 100vh;
+}
+  
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+/* A imagem ocupa 100% da altura do header */
+.logo {
+    max-height: 100px;
+    height: auto;
+    float: left;
+}
+.logo_b {
+    max-height: 100px;
+    height: auto;
+    float: right;
+}
+
+  
+/* Nome do time */
+.area-nome {
+    flex: 0 0 500px; /* pode ajustar o valor conforme necessário */
+    display: flex;
+    justify-content: center;
+}
+
+.nome-time {
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo da navegação */
+
+.menu-navegacao {
+    flex: 1;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu-navegacao a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.menu-navegacao a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+    color: #e1e1e1; /* leve destaque no hover */
+}
+
+.menu-navegacao a:hover::after {
+    width: 100%;
+}
+  
+/* HERO com fundo diferenciado */
+.hero {
+    background-image: url('../Imagens/Tball-jogo.png');   /* imagem atrás do hero */
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+  
+.hero-content {
+    background-color: rgba(116, 123, 139, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+  
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+  
+.botao {
+    display: inline-block;
+    background-color: #3d6147;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.botao:hover {
+    background-color: #2f4e39;
+    transform: scale(1.1);
+
+}
+  
+/* Seção Quem Somos */
+.quem-somos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+  
+.quem-somos h2 {
+    color: #3d6147;
+    margin-bottom: 20px;
+}
+  
+/* Destaques */
+.destaques {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+  
+.card {
+    background-color: #eaf6ef;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+  
+.card:hover {
+    transform: scale(1.03);
+}
+  
+.card h3 {
+    margin-bottom: 10px;
+    color: #3d6147;
+}
+  
+/* Rodapé */
+footer {
+    background-color: #1b1f28;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.carrossel-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carrossel-item {
+    display: inline-block;
+    width: 450px;
+    height: 300px;
+    margin-right: 10px;
+    background-color: #ccc;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.menu > li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu > li > a:hover {
+     text-decoration: underline;
+    text-decoration-color: white; 
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    border-radius: 0 0 5px 5px;
+    z-index: 1000;
+   /* visibility: hidden;*/
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #666;
+}
+
+/* Classe ativa que exibe o submenu */
+.has-submenu.active .submenu {
+    display: block;
+}
+
+
+
+
+
+  .caixa-estilosa {
+    background-color: #f8f9fa; 
+    border: 4px solid #630516; 
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+    float: left;
+}
+
+.caixa-estilosa h2 {
+    color: #007bff; 
+    margin-bottom: 10px;
+}
+
+.caixa-estilosa p {
+    color: black; 
+    font-weight: bold;
+}
+
+.caixa-estilosa:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+  .caixa {
+    background-color: #f8f9fa; 
+    border: 4px solid #630516; 
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+    float: right;
+}
+
+.caixa h2 {
+    color: #007bff; 
+    margin-bottom: 10px;
+}
+
+.caixa p {
+    color: black; 
+    font-weight: bold;
+}
+
+.caixa:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}

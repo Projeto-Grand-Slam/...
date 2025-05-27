@@ -1,0 +1,76 @@
+:root {
+  --branco: #f9f9f9;
+  --azul-fraco: #eaf2ff;
+  --azul: #36A1DB;
+  --amarelo-claro: #FDC524;
+  --amarelo-escuro: #CB6A0C;
+  --vermelho: #F94134;
+  --preto: #0000
+}
+
+.main {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--branco);
+  padding: 20px;
+}
+
+.main h1 {
+  font-size: 3rem;
+  background-color: var(--vermelho);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.main p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  background-color: var(--vermelho);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.cta-buttons a {
+  background-color: var(--amarelo-claro);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-buttons a:hover {
+  background-color: var(--amarelo-escuro);
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.highlight {
+  background-color: var(--azul-fraco);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 5px var(--preto);
+}

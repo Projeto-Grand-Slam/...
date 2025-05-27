@@ -1,0 +1,47 @@
+:root {
+  --branco: #f9f9f9;
+  --azul-fraco: #58b5e7;
+  --azul: #36A1DB;
+}
+
+.formulario-inscricao {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: var(--cor-caixa);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-inscricao label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formulario-inscricao input,
+.formulario-inscricao textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario-inscricao button {
+  margin-top: 20px;
+  background-color: var(--azul);
+  color: var(--branco);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.formulario-inscricao button:hover {
+  background-color: var(--azul-fraco);
+}
